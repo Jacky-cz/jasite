@@ -3,19 +3,37 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="theme-color" content="#f8fbff" />
+  <meta name="theme-color" content="#14263d" />
+  <meta name="author" content="和與資訊" />
+  <meta name="robots" content="index, follow" />
   <meta name="description" content="和與資訊以企業實際營運需求為出發點，結合超過 25 年的軟體開發與系統整合經驗，協助企業規劃客製化系統、流程數位化與長期技術架構。" />
   <meta property="og:type" content="website" />
   <meta property="og:locale" content="zh_TW" />
-  <meta property="og:title" content="和與資訊｜洞悉實務需求，成就卓越系統" />
+  <meta property="og:title" content="和與資訊｜企業系統整合、軟體開發與數位轉型" />
   <meta property="og:description" content="從企業流程的真實需求出發，打造穩定、靈活、能持續成長的數位解決方案。" />
-  <meta property="og:image" content="[正式上線時替換為品牌分享圖片網址]" />
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='18' fill='%232563eb'/%3E%3Cpath d='M18 17h7v30h-7zm11 0h7v30h-7zm11 0h7v30h-7z' fill='white' opacity='.92'/%3E%3C/svg%3E" />
+  <meta property="og:image" content="作品集/logo.jpg" />
+  <meta property="og:image:alt" content="和與資訊品牌 Logo" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="和與資訊｜企業系統整合、軟體開發與數位轉型" />
+  <meta name="twitter:description" content="從企業流程的真實需求出發，打造穩定、靈活、能持續成長的數位解決方案。" />
+  <meta name="twitter:image" content="作品集/logo.jpg" />
+  <link rel="icon" href="作品集/logo.jpg" type="image/jpeg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;600;700;800;900&amp;display=swap" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
-  <title>和與資訊｜洞悉實務需求，成就卓越系統</title>
-
-  <!-- Tailwind CDN：主要視覺由下方設計系統 CSS 管理，以確保穩定與一致。 -->
-  <script src="https://cdn.tailwindcss.com"></script>
+  <title>和與資訊｜企業系統整合、軟體開發與數位轉型</title>
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ProfessionalService",
+      "name": "和與資訊",
+      "description": "和與資訊以企業實際營運需求為出發點，提供客製化系統開發、企業系統整合、網站建置與數位轉型服務。",
+      "logo": "作品集/logo.jpg",
+      "areaServed": "TW",
+      "serviceType": ["企業系統開發", "系統整合", "流程數位化", "數位轉型顧問"]
+    }
+  </script>
   <style>
     /* =========================================================
        和與資訊個人品牌網站｜設計系統
@@ -47,28 +65,30 @@
     }
 
     *, *::before, *::after { box-sizing: border-box; }
-    html { scroll-behavior: smooth; scroll-padding-top: 100px; }
+    html { scroll-behavior: smooth; scroll-padding-top: 100px; color-scheme: light; }
     body {
       margin: 0;
       color: var(--ink);
       background: var(--paper);
-      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans TC", "PingFang TC", "Microsoft JhengHei", sans-serif;
+      font-family: "Noto Sans TC", Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang TC", "Microsoft JhengHei", sans-serif;
       font-size: 16px;
-      line-height: 1.75;
-      letter-spacing: .01em;
+      line-height: 1.8;
+      letter-spacing: .012em;
       overflow-x: clip;
       -webkit-font-smoothing: antialiased;
     }
     img, svg { max-width: 100%; }
     a { color: inherit; text-decoration: none; }
     button, input, select, textarea { font: inherit; }
+    h1, h2, h3, h4, p, figure { margin-block-start: 0; }
+    h1, h2, h3, h4 { text-wrap: balance; }
     button, a { -webkit-tap-highlight-color: transparent; }
     button { color: inherit; }
     ::selection { background: rgba(37, 99, 235, .15); color: var(--ink); }
     :focus-visible { outline: 3px solid rgba(16, 185, 129, .78); outline-offset: 4px; }
     .container { width: min(calc(100% - 44px), var(--content)); margin-inline: auto; }
-    .section { padding: 112px 0; position: relative; }
-    .section-sm { padding: 82px 0; }
+    .section { padding: clamp(78px, 8vw, 112px) 0; position: relative; }
+    .section-sm { padding: clamp(60px, 6vw, 82px) 0; }
     .section-tint { background: linear-gradient(180deg, #fbfdff 0%, #f6f9ff 100%); }
     .eyebrow {
       display: inline-flex; align-items: center; gap: 10px;
@@ -183,6 +203,8 @@
     .profile-top strong { display: block; font-size: 15px; }
     .profile-top span { display: block; color: var(--muted); font-size: 11px; margin-top: 3px; }
     .profile-card p { position: relative; z-index: 1; margin: 22px 0 0; max-width: 340px; color: #5b6880; font-size: 13px; line-height: 1.9; }
+    .about-logo { display: block; width: 100%; margin: 0 0 15px; padding: 13px; border: 1px solid #e1e8f7; border-radius: var(--radius); background: linear-gradient(135deg, #fff 0%, var(--mist) 100%); box-shadow: var(--shadow-soft); }
+    .about-logo img { display: block; width: 100%; height: 128px; object-fit: cover; object-position: center; border-radius: 12px; }
     .about-content > p { color: #536176; margin: 0 0 20px; line-height: 2.05; font-size: 15px; }
     .principle-list { margin-top: 29px; display: grid; gap: 12px; }
     .principle-item { display: flex; align-items: flex-start; gap: 13px; padding: 15px 16px; border: 1px solid #edf1f7; border-radius: 15px; background: white; transition: border-color .25s ease, transform .25s ease; }
@@ -194,6 +216,25 @@
     .experience-number { font-size: 34px; line-height: 1; color: var(--blue); letter-spacing: -.06em; font-weight: 800; white-space: nowrap; }
     .experience-copy { font-size: 11px; line-height: 1.6; color: var(--muted); }
     .experience-copy strong { display: block; color: var(--ink); font-size: 12px; margin-bottom: 2px; }
+
+    /* Portfolio / field work gallery */
+    .portfolio-section { padding: 105px 0; background: var(--mist); }
+    .portfolio-heading { display: flex; align-items: end; justify-content: space-between; gap: 30px; margin-bottom: 42px; }
+    .portfolio-heading .section-heading { margin-bottom: 0; }
+    .portfolio-note { max-width: 300px; margin: 0 0 4px; color: var(--muted); font-size: 12px; line-height: 1.9; }
+    .portfolio-groups { display: grid; gap: 42px; }
+    .portfolio-group-title { display: flex; align-items: center; gap: 12px; margin: 0 0 17px; color: var(--ink-soft); font-size: 15px; font-weight: 780; }
+    .portfolio-group-title::before { content: ""; width: 4px; height: 20px; border-radius: 5px; background: var(--mint); }
+    .portfolio-group-title span { color: var(--muted-2); font-size: 10px; letter-spacing: .13em; }
+    .portfolio-grid { display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); gap: 16px; }
+    .portfolio-item { position: relative; min-height: 220px; overflow: hidden; border: 1px solid #dce3eb; border-radius: 18px; background: #fff; box-shadow: 0 12px 32px rgba(20,38,61,.07); }
+    .portfolio-item:nth-child(1), .portfolio-item:nth-child(2) { grid-column: span 6; }
+    .portfolio-item:nth-child(3), .portfolio-item:nth-child(4), .portfolio-item:nth-child(5) { grid-column: span 6; }
+    .portfolio-item img { display: block; width: 100%; height: 100%; min-height: 220px; object-fit: cover; transition: transform .45s var(--ease), filter .45s ease; }
+    .portfolio-item:hover img { transform: scale(1.045); filter: saturate(1.08); }
+    .portfolio-caption { position: absolute; inset: auto 12px 12px; padding: 12px 14px; border: 1px solid rgba(255,255,255,.25); border-radius: 12px; color: #fff; background: linear-gradient(90deg, rgba(20,38,61,.9), rgba(20,38,61,.48)); backdrop-filter: blur(7px); }
+    .portfolio-caption strong { display: block; font-size: 13px; line-height: 1.45; }
+    .portfolio-caption span { display: block; margin-top: 2px; color: rgba(255,255,255,.78); font-size: 10px; letter-spacing: .08em; }
 
     /* Services */
     .services-head { display: flex; align-items: end; justify-content: space-between; gap: 30px; }
@@ -348,27 +389,6 @@
     .consultation-card .btn { position: relative; z-index: 1; margin-top: 25px; align-self: flex-start; }
     .contact-reassurance { position: relative; z-index: 1; margin-top: auto; padding-top: 29px; display: flex; align-items: center; gap: 9px; color: #748399; font-size: 10px; }
     .contact-reassurance svg { width: 16px; height: 16px; color: var(--mint); }
-    .form-grid { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 16px 13px; margin-top: 23px; }
-    .field { min-width: 0; display: flex; flex-direction: column; gap: 7px; }
-    .field.full { grid-column: 1 / -1; }
-    .field label { font-size: 11px; color: #43536a; font-weight: 750; }
-    .required-mark { color: #dc5563; margin-left: 3px; }
-    .field input, .field select, .field textarea { width: 100%; min-width: 0; color: var(--ink); border: 1px solid #dce4ef; background: rgba(255,255,255,.92); border-radius: 11px; padding: 12px 13px; font-size: 12px; outline: none; transition: border-color .2s ease, box-shadow .2s ease; }
-    .field input, .field select { min-height: 45px; }
-    .field textarea { min-height: 102px; resize: vertical; line-height: 1.8; }
-    .field input::placeholder, .field textarea::placeholder { color: #a2adbc; }
-    .field input:focus, .field select:focus, .field textarea:focus { border-color: #88a7f6; box-shadow: 0 0 0 4px rgba(37,99,235,.08); }
-    .field input[aria-invalid="true"], .field select[aria-invalid="true"], .field textarea[aria-invalid="true"] { border-color: #e05c6a; box-shadow: 0 0 0 3px rgba(224,92,106,.08); }
-    .field-error { min-height: 0; color: #c13d4a; font-size: 10px; line-height: 1.5; }
-    .privacy-check { display: flex; align-items: flex-start; gap: 10px; color: #6c7a8e; font-size: 10px; line-height: 1.75; margin: 18px 0 0; }
-    .privacy-check input { flex: 0 0 auto; width: 16px; height: 16px; margin: 2px 0 0; accent-color: var(--blue); }
-    .privacy-check a { color: var(--blue); text-decoration: underline; text-underline-offset: 3px; }
-    .form-submit-row { display: flex; flex-wrap: wrap; align-items: center; gap: 15px; margin-top: 20px; }
-    .form-submit-row .btn { min-height: 47px; font-size: 12px; }
-    .form-guard-note { color: #8290a2; font-size: 10px; line-height: 1.7; }
-    .form-message { display: none; margin-top: 17px; border-radius: 12px; border: 1px solid #c9d8fa; background: #f4f7ff; padding: 14px 15px; color: #36527f; font-size: 11px; line-height: 1.8; }
-    .form-message.is-visible { display: block; }
-
     /* Footer */
     .site-footer { background: #fff; }
     .footer-main { display: grid; grid-template-columns: 1.35fr 1fr 1fr; gap: 45px; padding: 48px 0 42px; }
@@ -432,6 +452,8 @@
       .about-aside { max-width: 600px; }
       .about-aside::before { left: auto; right: 6%; }
       .services-head, .cases-intro, .insights-top { display: block; }
+      .portfolio-heading { display: block; }
+      .portfolio-note { max-width: 620px; margin: -22px 0 28px; }
       .side-note, .case-disclaimer { max-width: 620px; text-align: left; margin: -22px 0 28px; }
       .services-head .section-heading, .cases-intro .section-heading, .insights-top .section-heading { margin-bottom: 38px; }
       .method-lead { position: static; }
@@ -482,6 +504,9 @@
       .strip-pill { gap: 7px; font-size: 10px; }
       .strip-pill svg { width: 15px; height: 15px; }
       .about-statement { font-size: 29px; }
+      .portfolio-section { padding: 68px 0; }
+      .portfolio-item:nth-child(n) { grid-column: 1 / -1; }
+      .portfolio-item, .portfolio-item img { min-height: 220px; }
       .profile-card { padding: 20px; }
       .about-content > p { font-size: 14px; }
       .principle-item { padding: 13px; }
@@ -516,10 +541,6 @@
       .contact-heading h2 { font-size: 31px; }
       .contact-heading p { font-size: 13px; }
       .contact-panel { padding: 22px 19px; border-radius: 19px; }
-      .form-grid { grid-template-columns: 1fr; gap: 13px; }
-      .field.full { grid-column: auto; }
-      .form-submit-row { align-items: flex-start; flex-direction: column; }
-      .form-submit-row .btn { width: 100%; }
       .footer-main { grid-template-columns: 1fr; gap: 27px; padding: 36px 0 30px; }
       .footer-brand { grid-column: auto; }
       .footer-bottom { align-items: flex-start; justify-content: center; flex-direction: column; gap: 4px; padding: 15px 0; }
@@ -547,6 +568,29 @@
     .social-link:nth-child(2) i, .social-link:nth-child(3) i { color: var(--blue); }
     .social-link:nth-child(4) i { color: var(--blue-deep); }
     .solution-card:nth-child(2) .solution-icon { color: var(--orange); }
+
+    /* Global UI polish: one type system, calmer rhythm, stronger readability. */
+    .hero h1, .section-heading h2, .contact-heading h2, .contact-me-card h2, .solutions-heading h2 { font-weight: 800; }
+    .hero-lead, .section-heading p, .contact-heading p, .about-content > p, .solution-card p, .service-desc, .case-body > p { letter-spacing: .008em; }
+    .portfolio-item { aspect-ratio: 16 / 10; }
+    .portfolio-item img { min-height: 0; }
+    .portfolio-item:focus-within { outline: 3px solid rgba(22,184,166,.45); outline-offset: 4px; }
+    .btn, .nav-cta { letter-spacing: .015em; }
+    .service-card, .case-card, .insight-card, .solution-card, .contact-panel, .contact-me-card { box-shadow: 0 10px 32px rgba(20,38,61,.06); }
+    .service-card:hover, .case-card:hover, .insight-card:hover, .solution-card:hover { box-shadow: 0 18px 42px rgba(20,38,61,.11); }
+    .form-redirect-card { display: flex; flex-direction: column; justify-content: center; }
+    .form-redirect-card .consult-icon { margin-bottom: 22px; }
+    .contact-points { display: grid; gap: 10px; margin: 22px 0 0; padding: 0; list-style: none; color: var(--muted); font-size: 12px; }
+    .contact-points li { display: flex; align-items: center; gap: 9px; }
+    .contact-points i { color: var(--mint); font-size: 11px; }
+    .form-redirect-card .btn { align-self: flex-start; margin-top: 25px; }
+    .site-footer .footer-links { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    @media (max-width: 580px) {
+      body { font-size: 15px; }
+      .section-heading h2, .solutions-heading h2 { line-height: 1.38; }
+      .portfolio-item { aspect-ratio: 4 / 3; }
+      .form-redirect-card .btn { width: 100%; }
+    }
   </style>
 </head>
 <body>
@@ -589,6 +633,7 @@
         <a href="#about">關於我</a>
         <a href="#services">專業服務</a>
         <a href="#cases">產業案例</a>
+        <a href="#portfolio">實務現場</a>
         <a href="#method">工作方法</a>
         <a href="#insights">技術觀點</a>
         <a class="nav-cta" href="https://calendar.app.google/sXJZUexhthwsJoXo8" target="_blank" rel="noopener noreferrer">預約專業諮詢 <svg aria-hidden="true"><use href="#i-arrow-up-right"></use></svg></a>
@@ -720,10 +765,11 @@
         <div class="about-aside reveal">
           <span class="eyebrow">ABOUT MY APPROACH</span>
           <h2 class="about-statement" id="aboutTitle">我相信，好的科技始於<strong><em>真正理解問題。</em></strong></h2>
+          <div class="about-logo"><img src="作品集/logo.jpg" alt="和與資訊公司 Logo" /></div>
           <div class="profile-card">
             <div class="profile-top">
               <div class="profile-avatar"><svg aria-hidden="true"><use href="#i-compass"></use></svg></div>
-              <div><strong>[請替換為個人姓名]</strong><span>[請替換為實際職稱] · 和與資訊有限公司</span></div>
+              <div><strong>和與資訊團隊</strong><span>企業系統與數位轉型顧問 · 和與資訊有限公司</span></div>
             </div>
             <p>我關注的不只是系統能不能運作，更在意它是否理解企業的工作方式，能否成為團隊日常中可靠、清楚而且可持續的工具。</p>
           </div>
@@ -740,6 +786,38 @@
             <div class="principle-item"><span class="principle-number">01</span><div><strong>先理解營運，再決定技術</strong><span>從真實情境找出問題源頭，不急著把需求變成功能清單。</span></div></div>
             <div class="principle-item"><span class="principle-number">02</span><div><strong>讓系統回應流程，而不是增加負擔</strong><span>讓資料、部門與工作節點更一致，降低不必要的重複作業。</span></div></div>
             <div class="principle-item"><span class="principle-number">03</span><div><strong>把長期維護納入一開始的設計</strong><span>兼顧穩定性、可維護性與後續擴充，讓系統能隨需求演進。</span></div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Portfolio / training and project field work -->
+    <section class="portfolio-section" id="portfolio" aria-labelledby="portfolioTitle">
+      <div class="container">
+        <div class="portfolio-heading">
+          <div class="section-heading reveal">
+            <span class="eyebrow">FIELD WORK</span>
+            <h2 id="portfolioTitle">在現場，讓知識與<span class="gradient-text">專案真正發生。</span></h2>
+            <p>從企業內訓到大型展演，將系統思維、數據方法與實務經驗帶進不同產業的工作現場。</p>
+          </div>
+          <p class="portfolio-note reveal reveal-delay-1">以下照片記錄和與資訊參與企業培訓、產業交流與專案展演的實務場景。</p>
+        </div>
+        <div class="portfolio-groups">
+          <div class="portfolio-group reveal">
+            <h3 class="portfolio-group-title">企業內訓與知識傳遞 <span>TRAINING &amp; ENABLEMENT</span></h3>
+            <div class="portfolio-grid">
+              <figure class="portfolio-item"><img src="作品集/台灣 Top3 電信業-training-classroom-01.png" alt="台灣 Top3 電信業企業內訓教室現場" loading="lazy" /><figcaption class="portfolio-caption"><strong>台灣 Top3 電信業</strong><span>企業內訓現場</span></figcaption></figure>
+              <figure class="portfolio-item"><img src="作品集/工研院-training-classroom-02.png" alt="工研院企業培訓教室現場" loading="lazy" /><figcaption class="portfolio-caption"><strong>工研院</strong><span>TRAINING CLASSROOM</span></figcaption></figure>
+              <figure class="portfolio-item"><img src="作品集/資策會-training-classroom-03.png" alt="資策會企業培訓現場" loading="lazy" /><figcaption class="portfolio-caption"><strong>資策會</strong><span>企業培訓現場</span></figcaption></figure>
+              <figure class="portfolio-item"><img src="作品集/台灣 Top3 航空業-training-classroom-04.png" alt="台灣 Top3 航空業企業內訓現場" loading="lazy" /><figcaption class="portfolio-caption"><strong>台灣 Top3 航空業</strong><span>TRAINING CLASSROOM</span></figcaption></figure>
+            </div>
+          </div>
+          <div class="portfolio-group reveal reveal-delay-1">
+            <h3 class="portfolio-group-title">產業交流與專案展演 <span>PROJECTS &amp; SHOWCASE</span></h3>
+            <div class="portfolio-grid">
+              <figure class="portfolio-item"><img src="作品集/國科會-expo-stage-01.jpg" alt="國科會 AI 專案展演舞台現場" loading="lazy" /><figcaption class="portfolio-caption"><strong>國科會</strong><span>AI PROJECT SHOWCASE</span></figcaption></figure>
+              <figure class="portfolio-item"><img src="作品集/台灣 Top3 IC設計-expo-stage-02.jpg" alt="台灣 Top3 IC 設計產業展演現場" loading="lazy" /><figcaption class="portfolio-caption"><strong>台灣 Top3 IC 設計</strong><span>EXPO STAGE</span></figcaption></figure>
+            </div>
           </div>
         </div>
       </div>
@@ -998,25 +1076,16 @@
             <span class="cta-status"><span class="status-dot"></span>Status: Ready to Connect</span>
             <div class="contact-reassurance"><svg aria-hidden="true"><use href="#i-check-circle"></use></svg>以企業實際情境為起點，討論合適的下一步。</div>
           </aside>
-          <div class="contact-panel reveal reveal-delay-1">
-            <h3>也可以先留下你的需求</h3>
-            <p>填寫下列表單可先整理討論方向。目前表單尚未串接後端，送出操作只會進行欄位驗證與顯示設定提醒，不會寄送或儲存資料。</p>
-            <form id="contactForm" novalidate>
-              <div class="form-grid">
-                <div class="field"><label for="contactName">姓名<span class="required-mark">*</span></label><input id="contactName" name="name" autocomplete="name" required aria-describedby="nameError" placeholder="怎麼稱呼你？" /><span class="field-error" id="nameError"></span></div>
-                <div class="field"><label for="companyName">公司名稱<span class="required-mark">*</span></label><input id="companyName" name="company" autocomplete="organization" required aria-describedby="companyError" placeholder="公司／組織名稱" /><span class="field-error" id="companyError"></span></div>
-                <div class="field"><label for="contactEmail">電子郵件<span class="required-mark">*</span></label><input id="contactEmail" name="email" type="email" autocomplete="email" required aria-describedby="emailError" placeholder="name@company.com" /><span class="field-error" id="emailError"></span></div>
-                <div class="field"><label for="contactPhone">聯絡電話（選填）</label><input id="contactPhone" name="phone" type="tel" autocomplete="tel" placeholder="方便聯絡的電話" /></div>
-                <div class="field full"><label for="serviceType">想討論的服務類型<span class="required-mark">*</span></label><select id="serviceType" name="serviceType" required aria-describedby="serviceError"><option value="">請選擇一項</option><option>客製化系統開發</option><option>企業系統整合</option><option>網站建置與雲端主機</option><option>技術顧問與數位轉型</option><option>其他需求</option></select><span class="field-error" id="serviceError"></span></div>
-                <div class="field full"><label for="contactMessage">目前面臨的問題或需求<span class="required-mark">*</span></label><textarea id="contactMessage" name="message" required aria-describedby="messageError" placeholder="例如：目前有哪些流程卡關、使用哪些系統、希望改善什麼……"></textarea><span class="field-error" id="messageError"></span></div>
-              </div>
-              <label class="privacy-check" for="privacyConsent"><input type="checkbox" id="privacyConsent" name="privacyConsent" required aria-describedby="privacyError" /><span>我已閱讀並同意【請替換為正式個人資料蒐集告知事項】，了解本表單的資料蒐集目的、使用範圍、保存方式與當事人權利。正式上線前需依實際服務與適用法規確認告知內容。<span class="required-mark">*</span><span class="field-error" id="privacyError" style="display:block"></span></span></label>
-              <div class="form-submit-row">
-                <button class="btn btn-primary" type="submit">檢查表單內容 <svg aria-hidden="true"><use href="#i-arrow-right"></use></svg></button>
-                <span class="form-guard-note">尚未連接後端／郵件 API／表單服務<br />目前不會傳送或保存你的資料。</span>
-              </div>
-              <div class="form-message" id="formMessage" role="status" aria-live="polite"></div>
-            </form>
+          <div class="contact-panel form-redirect-card reveal reveal-delay-1">
+            <span class="consult-icon"><svg aria-hidden="true"><use href="#i-book"></use></svg></span>
+            <h3>填寫需求表單</h3>
+            <p>用幾分鐘整理你的專案背景、目前遇到的問題與希望改善的方向，讓我們在第一次交流前先掌握重點。</p>
+            <ul class="contact-points" aria-label="需求表單內容">
+              <li><i class="fa-solid fa-check" aria-hidden="true"></i>目前的營運流程與挑戰</li>
+              <li><i class="fa-solid fa-check" aria-hidden="true"></i>希望改善的系統或服務方向</li>
+              <li><i class="fa-solid fa-check" aria-hidden="true"></i>適合安排討論的聯絡方式</li>
+            </ul>
+            <a class="btn btn-primary" href="https://forms.gle/qgsaQbFLLS7qm7Po6" target="_blank" rel="noopener noreferrer">前往填寫需求表單 <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
           </div>
         </div>
       </div>
@@ -1032,14 +1101,13 @@
       </div>
       <div>
         <h2 class="footer-heading">EXPLORE</h2>
-        <div class="footer-links"><a href="#about">關於我</a><a href="#services">專業服務</a><a href="#cases">產業案例</a><a href="#method">工作方法</a><a href="#insights">技術觀點</a><a href="#contact">預約諮詢</a></div>
+        <div class="footer-links"><a href="#about">關於我</a><a href="#portfolio">實務現場</a><a href="#services">專業服務</a><a href="#cases">產業案例</a><a href="#method">工作方法</a><a href="#insights">技術觀點</a><a href="#contact-me">聯絡我</a><a href="#contact">預約諮詢</a></div>
       </div>
       <div class="footer-contact">
         <h2 class="footer-heading">CONTACT</h2>
         <p><strong style="color:var(--ink-soft)">和與資訊有限公司</strong></p>
-        <p>個人品牌窗口：[請替換為姓名與職稱]</p>
-        <p>電子郵件：[請替換為正式聯絡信箱]</p>
-        <p>聯絡電話：[請替換為正式聯絡電話]</p>
+        <p>服務內容：企業系統整合、軟體開發與數位轉型</p>
+        <p>聯絡方式：LINE、Facebook 或需求表單</p>
         <a href="https://calendar.app.google/sXJZUexhthwsJoXo8" target="_blank" rel="noopener noreferrer">Google Calendar 預約連結 ↗</a>
       </div>
     </div>
@@ -1165,68 +1233,6 @@
       document.querySelectorAll('[data-placeholder-link]').forEach(button => {
         button.addEventListener('click', () => showToast('此篇文章目前僅為主題預覽，尚未上線。正式發布後請將此按鈕替換為實際文章網址。'));
       });
-
-      // Contact form: validate locally, but never claim delivery without a configured backend.
-      const form = document.getElementById('contactForm');
-      const formMessage = document.getElementById('formMessage');
-      const validators = [
-        { input: document.getElementById('contactName'), error: document.getElementById('nameError'), message: '請填寫姓名。', valid: el => el.value.trim().length > 0 },
-        { input: document.getElementById('companyName'), error: document.getElementById('companyError'), message: '請填寫公司名稱。', valid: el => el.value.trim().length > 0 },
-        { input: document.getElementById('contactEmail'), error: document.getElementById('emailError'), message: '請輸入有效的電子郵件地址。', valid: el => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(el.value.trim()) },
-        { input: document.getElementById('serviceType'), error: document.getElementById('serviceError'), message: '請選擇想討論的服務類型。', valid: el => el.value.trim().length > 0 },
-        { input: document.getElementById('contactMessage'), error: document.getElementById('messageError'), message: '請簡單描述目前的問題或需求。', valid: el => el.value.trim().length > 0 }
-      ];
-      const privacyConsent = document.getElementById('privacyConsent');
-      const privacyError = document.getElementById('privacyError');
-
-      function setFieldState(field, isValid) {
-        if (!field.input || !field.error) return;
-        field.input.setAttribute('aria-invalid', String(!isValid));
-        field.error.textContent = isValid ? '' : field.message;
-      }
-      validators.forEach(field => {
-        if (!field.input) return;
-        field.input.addEventListener('input', () => {
-          // Clear inline errors as the visitor corrects their input.
-          if (field.input.getAttribute('aria-invalid') === 'true') setFieldState(field, field.valid(field.input));
-        });
-        field.input.addEventListener('change', () => {
-          if (field.input.getAttribute('aria-invalid') === 'true') setFieldState(field, field.valid(field.input));
-        });
-      });
-      if (privacyConsent) privacyConsent.addEventListener('change', () => {
-        privacyConsent.setAttribute('aria-invalid', String(!privacyConsent.checked));
-        if (privacyError) privacyError.textContent = privacyConsent.checked ? '' : '正式送出前需同意資料蒐集告知事項。';
-      });
-
-      if (form) {
-        form.addEventListener('submit', event => {
-          event.preventDefault();
-          let allValid = true;
-          let firstInvalid = null;
-          validators.forEach(field => {
-            const valid = field.valid(field.input);
-            setFieldState(field, valid);
-            if (!valid) { allValid = false; firstInvalid ||= field.input; }
-          });
-          const consentValid = Boolean(privacyConsent && privacyConsent.checked);
-          if (privacyConsent) privacyConsent.setAttribute('aria-invalid', String(!consentValid));
-          if (privacyError) privacyError.textContent = consentValid ? '' : '正式送出前需同意資料蒐集告知事項。';
-          if (!consentValid) { allValid = false; firstInvalid ||= privacyConsent; }
-          if (!allValid) {
-            if (formMessage) {
-              formMessage.textContent = '請依欄位提示補齊或修正資料。此表單目前只在本頁進行檢查，沒有傳送任何資料。';
-              formMessage.classList.add('is-visible');
-            }
-            firstInvalid?.focus();
-            return;
-          }
-          if (formMessage) {
-            formMessage.textContent = '欄位驗證完成，但網站尚未串接後端、郵件 API 或表單服務，因此資料並未寄出、儲存或送達。正式上線前，請先設定並測試資料處理服務。';
-            formMessage.classList.add('is-visible');
-          }
-        });
-      }
 
       // Update copyright year automatically.
       const year = document.getElementById('year');
