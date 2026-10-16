@@ -217,6 +217,20 @@
     .experience-copy { font-size: 11px; line-height: 1.6; color: var(--muted); }
     .experience-copy strong { display: block; color: var(--ink); font-size: 12px; margin-bottom: 2px; }
 
+    /* Intro video */
+    .intro-video-section { padding: 88px 0 96px; background: linear-gradient(180deg, #fff 0%, var(--mist) 100%); }
+    .intro-video-heading { max-width: 720px; margin: 0 auto 34px; text-align: center; }
+    .intro-video-heading .eyebrow { justify-content: center; }
+    .intro-video-heading .eyebrow::after { content: ""; width: 22px; height: 1px; background: currentColor; opacity: .75; }
+    .intro-video-heading h2 { margin: 15px 0 14px; font-size: clamp(29px, 4vw, 45px); line-height: 1.35; letter-spacing: -.045em; font-weight: 800; }
+    .intro-video-heading p { margin: 0 auto; max-width: 620px; color: var(--muted); font-size: 14px; line-height: 1.95; }
+    .video-shell { position: relative; width: min(100%, 900px); margin: 0 auto; padding: 10px; border: 1px solid #d7e3f5; border-radius: 27px; background: linear-gradient(135deg, rgba(255,255,255,.98), rgba(237,244,255,.92)); box-shadow: 0 22px 60px rgba(20,38,61,.12), 0 0 0 8px rgba(52,120,246,.035); }
+    .video-frame { position: relative; overflow: hidden; aspect-ratio: 16 / 9; border-radius: 18px; background: var(--blue-deep); }
+    .video-frame::before { content: ""; position: absolute; inset: 0; z-index: 1; pointer-events: none; border: 1px solid rgba(255,255,255,.18); border-radius: inherit; }
+    .video-frame iframe { display: block; width: 100%; height: 100%; border: 0; }
+    .video-fallback { margin: 15px 0 0; text-align: center; color: var(--muted-2); font-size: 11px; }
+    .video-fallback a { color: var(--blue); font-weight: 700; text-decoration: underline; text-underline-offset: 3px; }
+
     /* Portfolio / field work gallery */
     .portfolio-section { padding: 105px 0; background: var(--mist); }
     .portfolio-heading { display: flex; align-items: end; justify-content: space-between; gap: 30px; margin-bottom: 42px; }
@@ -389,6 +403,34 @@
     .consultation-card .btn { position: relative; z-index: 1; margin-top: 25px; align-self: flex-start; }
     .contact-reassurance { position: relative; z-index: 1; margin-top: auto; padding-top: 29px; display: flex; align-items: center; gap: 9px; color: #748399; font-size: 10px; }
     .contact-reassurance svg { width: 16px; height: 16px; color: var(--mint); }
+    .contact-info-card { display: flex; flex-direction: column; justify-content: center; }
+    .contact-info-card h3 { margin-bottom: 18px; }
+    .contact-details { display: grid; gap: 14px; margin: 0; }
+    .contact-detail { display: grid; grid-template-columns: 30px minmax(0, 1fr); gap: 10px; align-items: start; color: var(--muted); font-size: 12px; line-height: 1.75; }
+    .contact-detail > i { display: grid; place-items: center; width: 30px; height: 30px; border-radius: 9px; color: var(--blue); background: #edf4ff; }
+    .contact-detail strong { display: block; color: var(--ink-soft); font-size: 11px; }
+    .contact-detail a { color: var(--blue); font-weight: 700; }
+    .contact-detail a:hover { text-decoration: underline; text-underline-offset: 3px; }
+    .contact-info-card .btn { align-self: flex-start; margin-top: 25px; }
+    .contact-form-panel h3 { margin-bottom: 8px; }
+    .contact-form-panel > p { margin-bottom: 20px; }
+    .contact-form { display: grid; gap: 15px; }
+    .contact-form-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; }
+    .contact-field { display: flex; flex-direction: column; gap: 6px; min-width: 0; }
+    .contact-field.full { grid-column: 1 / -1; }
+    .contact-field label { color: var(--ink-soft); font-size: 11px; font-weight: 750; }
+    .contact-field label span { color: #d05b63; margin-left: 3px; }
+    .contact-field input, .contact-field select, .contact-field textarea { width: 100%; min-width: 0; border: 1px solid #dce4ef; border-radius: 11px; padding: 11px 12px; color: var(--ink); background: rgba(255,255,255,.96); font-size: 12px; outline: none; transition: border-color .2s ease, box-shadow .2s ease; }
+    .contact-field input, .contact-field select { min-height: 44px; }
+    .contact-field textarea { min-height: 112px; resize: vertical; line-height: 1.8; }
+    .contact-field input::placeholder, .contact-field textarea::placeholder { color: #a2adbc; }
+    .contact-field input:focus, .contact-field select:focus, .contact-field textarea:focus { border-color: #7da6f4; box-shadow: 0 0 0 4px rgba(52,120,246,.11); }
+    .contact-form-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 14px; margin-top: 2px; }
+    .contact-form-actions .btn { min-height: 47px; }
+    .contact-form button:disabled { cursor: wait; opacity: .68; transform: none; }
+    .contact-form-note { color: var(--muted-2); font-size: 10px; line-height: 1.7; }
+    .contact-form-status { display: none; margin: 0; padding: 10px 12px; border-radius: 10px; color: #246b5d; background: #eafaf4; font-size: 11px; line-height: 1.7; }
+    .contact-form-status.is-visible { display: block; }
     /* Footer */
     .site-footer { background: #fff; }
     .footer-main { display: grid; grid-template-columns: 1.35fr 1fr 1fr; gap: 45px; padding: 48px 0 42px; }
@@ -461,6 +503,8 @@
       .solutions-grid { grid-template-columns: 1fr; }
       .contact-me-grid { grid-template-columns: 1fr; }
       .contact-grid { grid-template-columns: 1fr; }
+      .contact-form-grid { grid-template-columns: 1fr; }
+      .contact-field.full { grid-column: auto; }
       .consultation-card { min-height: 320px; }
       .footer-main { grid-template-columns: 1fr 1fr; gap: 35px; }
       .footer-brand { grid-column: 1 / -1; }
@@ -504,6 +548,9 @@
       .strip-pill { gap: 7px; font-size: 10px; }
       .strip-pill svg { width: 15px; height: 15px; }
       .about-statement { font-size: 29px; }
+      .intro-video-section { padding: 68px 0; }
+      .video-shell { padding: 6px; border-radius: 20px; }
+      .video-frame { border-radius: 14px; }
       .portfolio-section { padding: 68px 0; }
       .portfolio-item:nth-child(n) { grid-column: 1 / -1; }
       .portfolio-item, .portfolio-item img { min-height: 220px; }
@@ -541,6 +588,8 @@
       .contact-heading h2 { font-size: 31px; }
       .contact-heading p { font-size: 13px; }
       .contact-panel { padding: 22px 19px; border-radius: 19px; }
+      .contact-form-actions { align-items: stretch; flex-direction: column; }
+      .contact-form-actions .btn { width: 100%; }
       .footer-main { grid-template-columns: 1fr; gap: 27px; padding: 36px 0 30px; }
       .footer-brand { grid-column: auto; }
       .footer-bottom { align-items: flex-start; justify-content: center; flex-direction: column; gap: 4px; padding: 15px 0; }
@@ -631,6 +680,7 @@
       </button>
       <nav class="nav-links" id="primaryNav" aria-label="主要導覽">
         <a href="#about">關於我</a>
+        <a href="#intro-video">影片介紹</a>
         <a href="#services">專業服務</a>
         <a href="#cases">產業案例</a>
         <a href="#portfolio">實務現場</a>
@@ -787,6 +837,23 @@
             <div class="principle-item"><span class="principle-number">02</span><div><strong>讓系統回應流程，而不是增加負擔</strong><span>讓資料、部門與工作節點更一致，降低不必要的重複作業。</span></div></div>
             <div class="principle-item"><span class="principle-number">03</span><div><strong>把長期維護納入一開始的設計</strong><span>兼顧穩定性、可維護性與後續擴充，讓系統能隨需求演進。</span></div></div>
           </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Intro video -->
+    <section class="intro-video-section" id="intro-video" aria-labelledby="introVideoTitle">
+      <div class="container">
+        <div class="intro-video-heading reveal">
+          <span class="eyebrow">VIDEO INTRODUCTION</span>
+          <h2 id="introVideoTitle">用一段影片，<span class="gradient-text">認識和與資訊。</span></h2>
+          <p>從實務需求出發，理解企業流程、系統整合與數位轉型，讓技術真正成為企業持續成長的力量。</p>
+        </div>
+        <div class="video-shell reveal reveal-delay-1">
+          <div class="video-frame">
+            <iframe src="https://www.youtube.com/embed/i-gmUH_d_8w?rel=0&amp;modestbranding=1" title="和與資訊公司介紹影片" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+          </div>
+          <p class="video-fallback">影片無法播放？<a href="https://www.youtube.com/watch?v=i-gmUH_d_8w" target="_blank" rel="noopener noreferrer">在 YouTube 開啟影片</a></p>
         </div>
       </div>
     </section>
@@ -1068,29 +1135,41 @@
           <p>無論你正在規劃新系統、整合既有平台，或希望重新梳理企業營運流程，我們都可以從實際問題出發，一起找出更清晰、穩健且適合長期發展的解決方案。</p>
         </div>
         <div class="contact-grid">
-          <aside class="contact-panel consultation-card reveal">
-            <span class="consult-icon"><svg aria-hidden="true"><use href="#i-calendar"></use></svg></span>
-            <h3>預約一場專業交流</h3>
-            <p>先談談目前的流程、系統現況與目標，再一起釐清可能的方向。第一次對話不必準備完整規格，帶著你正在面對的問題即可。</p>
-            <a class="btn btn-primary" href="https://calendar.app.google/sXJZUexhthwsJoXo8" target="_blank" rel="noopener noreferrer">預約專業諮詢 <svg aria-hidden="true"><use href="#i-arrow-up-right"></use></svg></a>
-            <span class="cta-status"><span class="status-dot"></span>Status: Ready to Connect</span>
-            <div class="contact-reassurance"><svg aria-hidden="true"><use href="#i-check-circle"></use></svg>以企業實際情境為起點，討論合適的下一步。</div>
+          <aside class="contact-panel contact-info-card reveal">
+            <span class="consult-icon"><svg aria-hidden="true"><use href="#i-network"></use></svg></span>
+            <h3>與我們取得聯繫</h3>
+            <div class="contact-details">
+              <div class="contact-detail"><i class="fa-solid fa-envelope" aria-hidden="true"></i><div><strong>聯絡信箱</strong><a href="mailto:jackypan1015@gmail.com">jackypan1015@gmail.com</a></div></div>
+              <div class="contact-detail"><i class="fa-solid fa-phone" aria-hidden="true"></i><div><strong>電話</strong><a href="tel:+886224272777">(02) 2427-2777</a><br /><a href="tel:+886938560383">M：0938560383</a></div></div>
+              <div class="contact-detail"><i class="fa-solid fa-location-dot" aria-hidden="true"></i><div><strong>地址</strong><a href="https://www.google.com/maps/search/?api=1&amp;query=106021+台北市大安區羅斯福路三段335號11樓之二" target="_blank" rel="noopener noreferrer">106021 台北市大安區羅斯福路三段 335 號 11 樓之二</a></div></div>
+              <div class="contact-detail"><i class="fa-solid fa-building" aria-hidden="true"></i><div><strong>統編</strong>xxxxxxxx</div></div>
+            </div>
+            <a class="btn btn-ghost" href="https://calendar.app.google/sXJZUexhthwsJoXo8" target="_blank" rel="noopener noreferrer">預約專業諮詢 <svg aria-hidden="true"><use href="#i-arrow-up-right"></use></svg></a>
           </aside>
-          <div class="contact-panel form-redirect-card reveal reveal-delay-1">
-            <span class="consult-icon"><svg aria-hidden="true"><use href="#i-book"></use></svg></span>
-            <h3>填寫需求表單</h3>
-            <p>用幾分鐘整理你的專案背景、目前遇到的問題與希望改善的方向，讓我們在第一次交流前先掌握重點。</p>
-            <ul class="contact-points" aria-label="需求表單內容">
-              <li><i class="fa-solid fa-check" aria-hidden="true"></i>目前的營運流程與挑戰</li>
-              <li><i class="fa-solid fa-check" aria-hidden="true"></i>希望改善的系統或服務方向</li>
-              <li><i class="fa-solid fa-check" aria-hidden="true"></i>適合安排討論的聯絡方式</li>
-            </ul>
-            <a class="btn btn-primary" href="https://forms.gle/qgsaQbFLLS7qm7Po6" target="_blank" rel="noopener noreferrer">前往填寫需求表單 <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
+          <div class="contact-panel contact-form-panel reveal reveal-delay-1">
+            <h3>聯絡我們</h3>
+            <p>請留下基本資料與需求，我們會透過 Email 與你聯繫。</p>
+            <form class="contact-form" id="contactForm" action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSc7lLfJpYafWonDEBTWBvHaRjv_9uAlNXC1CMvpYDXzh-fN9Q/formResponse" method="POST" target="googleFormTarget">
+              <div class="contact-form-grid">
+                <div class="contact-field"><label for="contactName">您的姓名／稱呼<span>*</span></label><input id="contactName" name="entry.588998168" autocomplete="name" required placeholder="請輸入姓名或稱呼" /></div>
+                <div class="contact-field"><label for="contactEmail">聯絡電子信箱<span>*</span></label><input id="contactEmail" name="entry.476214014" type="email" autocomplete="email" required placeholder="name@example.com" /></div>
+                <div class="contact-field full"><label for="serviceType">您的需求<span>*</span></label><select id="serviceType" name="entry.1610329698" required><option value="">請選擇需求類型</option><option>企業內訓</option><option>資料科學專案</option><option>系統建置</option></select></div>
+                <div class="contact-field full"><label for="contactMessage">需求簡介<span>*</span></label><textarea id="contactMessage" name="entry.1646642689" required placeholder="請詳細描述目前的需求、預期目標或遇到的問題……"></textarea></div>
+                <div class="contact-field full"><label for="contactTime">適合聯絡的時間<span>*</span></label><select id="contactTime" name="entry.1091995575" required><option value="">請選擇方便聯絡的時段</option><option>平日上午 09:00–12:00</option><option>平日下午 13:00–17:00</option><option>平日晚間 18:00–21:00</option><option>時間皆可，請先 Email 聯繫</option><option>其他時段（請於需求簡介說明）</option></select></div>
+              </div>
+              <div class="contact-form-actions">
+                <button class="btn btn-primary" type="submit">送出聯絡資訊 <i class="fa-solid fa-paper-plane" aria-hidden="true"></i></button>
+                <span class="contact-form-note">資料會安全送至 Google 表單，我們將盡快與您聯絡。</span>
+              </div>
+              <p class="contact-form-status" id="contactFormStatus" role="status" aria-live="polite"></p>
+            </form>
           </div>
         </div>
       </div>
     </section>
   </main>
+
+  <iframe class="sr-only" name="googleFormTarget" id="googleFormTarget" title="Google 表單背景送出" aria-hidden="true"></iframe>
 
   <!-- Footer -->
   <footer class="site-footer">
@@ -1101,13 +1180,14 @@
       </div>
       <div>
         <h2 class="footer-heading">EXPLORE</h2>
-        <div class="footer-links"><a href="#about">關於我</a><a href="#portfolio">實務現場</a><a href="#services">專業服務</a><a href="#cases">產業案例</a><a href="#method">工作方法</a><a href="#insights">技術觀點</a><a href="#contact-me">聯絡我</a><a href="#contact">預約諮詢</a></div>
+        <div class="footer-links"><a href="#about">關於我</a><a href="#intro-video">影片介紹</a><a href="#portfolio">實務現場</a><a href="#services">專業服務</a><a href="#cases">產業案例</a><a href="#method">工作方法</a><a href="#insights">技術觀點</a><a href="#contact-me">聯絡我</a><a href="#contact">預約諮詢</a></div>
       </div>
       <div class="footer-contact">
         <h2 class="footer-heading">CONTACT</h2>
         <p><strong style="color:var(--ink-soft)">和與資訊有限公司</strong></p>
-        <p>服務內容：企業系統整合、軟體開發與數位轉型</p>
-        <p>聯絡方式：LINE、Facebook 或需求表單</p>
+        <p><a href="mailto:jackypan1015@gmail.com">jackypan1015@gmail.com</a></p>
+        <p><a href="tel:+886224272777">(02) 2427-2777</a> · <a href="tel:+886938560383">0938560383</a></p>
+        <p>106021 台北市大安區羅斯福路三段 335 號 11 樓之二</p>
         <a href="https://calendar.app.google/sXJZUexhthwsJoXo8" target="_blank" rel="noopener noreferrer">Google Calendar 預約連結 ↗</a>
       </div>
     </div>
@@ -1233,6 +1313,30 @@
       document.querySelectorAll('[data-placeholder-link]').forEach(button => {
         button.addEventListener('click', () => showToast('此篇文章目前僅為主題預覽，尚未上線。正式發布後請將此按鈕替換為實際文章網址。'));
       });
+
+      // Google Forms contact form: submit in the background and keep the visitor on this page.
+      const contactForm = document.getElementById('contactForm');
+      const contactFormStatus = document.getElementById('contactFormStatus');
+      if (contactForm) {
+        contactForm.addEventListener('submit', event => {
+          event.preventDefault();
+          if (!contactForm.reportValidity()) return;
+          const submitButton = contactForm.querySelector('button[type="submit"]');
+          if (submitButton) submitButton.disabled = true;
+          contactForm.classList.add('is-submitting');
+          window.setTimeout(() => {
+            contactForm.reset();
+            contactForm.classList.remove('is-submitting');
+            if (submitButton) submitButton.disabled = false;
+            showToast('需求已送出，我們將盡快與您聯絡！');
+          }, 900);
+          if (contactFormStatus) {
+            contactFormStatus.textContent = '正在送出需求，請稍候……';
+            contactFormStatus.classList.add('is-visible');
+          }
+          contactForm.submit();
+        });
+      }
 
       // Update copyright year automatically.
       const year = document.getElementById('year');
